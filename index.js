@@ -2,12 +2,11 @@ const menu_button = document.getElementById('menu_button');
 const menu_frame = document.getElementById('menu_frame');
 const close_button = document.getElementById('close_button');
 const login_button = document.getElementById('login_arc');
-const more_dropdown = document.getElementById('more_options');
-const sidebar_option = document.getElementById('sidebar_option')
 
-const extra_options = document.getElementById('extra_options')
-const more_options = document.getElementById('more_options');
-
+var sidebar_option = document.getElementById('sidebar_option');
+var extra_options = document.getElementById('extra_options')
+var more_options = document.getElementById('more_options');
+var height = sidebar_option.clientHeight;
 
 //menu button sliding effect
 // menu_button.addEventListener('click',()=>{
@@ -21,6 +20,11 @@ const more_options = document.getElementById('more_options');
 //         menu_frame.style.marginLeft="-30%";
 //     }
 // })
+
+//orientation change
+window.addEventListener('orientationchange',()=>{
+    height = sidebar_option.clientHeight;
+})
 
 //top left, close menu button
 close_button.addEventListener('click',()=>{
@@ -41,11 +45,9 @@ login_button.addEventListener('click',()=>{
 })
 
 //dropDown feature in the menu bar
-more_dropdown.addEventListener('click',()=>{
+more_options.addEventListener('click',()=>{
     console.log('Dropdown button clicked.');
-
-    const height = sidebar_option.clientHeight;
-    const str_height = height*3+'px'
+    var str_height = height*3+'px'
     console.log(str_height);
 
     if(extra_options.style.height==='0px'){
