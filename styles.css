@@ -6,11 +6,10 @@ body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
 }
-.nav_bar{
-    position: fixed;
-}
 
 #nav_bar{
+    position: fixed;
+    border-bottom: 5px solid rgba(85, 85, 85, 0.486);
     background-color: white;
     width:100%;
     margin-left:0;
@@ -20,7 +19,7 @@ body{
 #menu_button{
     float: left;
     cursor: pointer;
-    transition:1.25s ease;
+    transition:0.5s linear;
     margin-left:0.5%;
 }
 
@@ -48,11 +47,20 @@ body{
     width:30%;
     height:100%;
     background-color:white;
-    transition:1.25s ease; /* Optimize this part */
+    transition:0.75s linear; /* Optimize this part */
     margin-left:-30%;
     z-index:1;
     position:fixed;
     box-shadow: 2.5px 2.5px rgba(211, 211, 211, 0.486);
+}
+
+/* 768px */
+@media only screen and (max-width: 768px){
+    #menu_frame{
+        width:100%;
+        text-align: center;
+        margin-left:-100%;
+    }
 }
 
 .sidebar_option{
@@ -90,9 +98,11 @@ body{
 #testing_1{
     margin:0;
     height:50rem;
+    border-bottom: 5px solid rgba(85, 85, 85, 0.486);
 }
 
 #testing_1 h1{
+    text-align: center;
     margin:0;
     padding:4rem 3.5rem;
 }
@@ -100,9 +110,11 @@ body{
 #testing_2{
     margin:0;
     height:50rem;
+    border-bottom: 5px solid rgba(85, 85, 85, 0.486);
 }
 
 #testing_2 h1{
+    text-align: center;
     margin:0;
     padding:2.5rem 3.5rem;
 }
@@ -116,4 +128,10 @@ body{
     margin:0;
     padding-top:1rem;
     padding-left:3.5rem;
+}
+
+@media only screen and (max-width: 768px){
+    #login h1{
+        text-align: center;
+    }
 }
