@@ -55,7 +55,7 @@ body{
 }
 
 /* 768px */
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1125px){
     #menu_frame{
         width:100%;
         text-align: center;
@@ -130,7 +130,7 @@ body{
     padding-left:3.5rem;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1125px){
     #login h1{
         padding-left:0;
         text-align: center;
