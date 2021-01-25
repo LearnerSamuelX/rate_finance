@@ -74,12 +74,12 @@ body{
 
 #extra_options{
     height:0;
-    transition:height 0.5s;
+    transition:height 0.25s;
     color:white;
 }
 
 .extra_option{
-    transition:color 0.5s;
+    transition:color 0.25s;
 }
 
 #more_options{
