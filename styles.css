@@ -19,10 +19,10 @@ body{
 }
 
 #menu_button{
-    float: left;
-    cursor: pointer;
     transition:0.5s linear;
     margin-left:0.5%;
+    float: left;
+    cursor: pointer;
 }
 
 #login_button{    
@@ -48,6 +48,7 @@ body{
 #menu_frame{
     width:30%;
     height:100%;
+    overflow:scroll;
     background-color:white;
     transition:0.75s linear; /* Optimize this part */
     margin-left:-30%;
@@ -60,9 +61,14 @@ body{
 @media only screen and (max-width: 1125px){
     #menu_frame{
         width:100%;
-        text-align: center;
         margin-left:-100%;
-        overflow:scroll;
+        overflow:auto;
+    }
+
+    .sidebar_option{
+        width:40%;
+        margin-left:auto;
+        margin-right:auto;
     }
 }
 

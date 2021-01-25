@@ -8,19 +8,6 @@ var extra_options = document.getElementById('extra_options')
 var more_options = document.getElementById('more_options');
 var height = sidebar_option.clientHeight;
 
-//menu button sliding effect
-// menu_button.addEventListener('click',()=>{
-//     if(menu_button.style.transform===""||menu_button.style.transform==="rotate(0deg)"){
-//         menu_button.style.transform="rotate(90deg)";
-//         menu_button.style.marginLeft="30.5%";
-//         menu_frame.style.marginLeft="0";
-//     }else{
-//         menu_button.style.transform="rotate(0deg)";
-//         menu_button.style.marginLeft="0.5%";
-//         menu_frame.style.marginLeft="-30%";
-//     }
-// })
-
 //top left, close menu button
 close_button.addEventListener('click',()=>{
     menu_button.style.transform="rotate(0deg)";
@@ -30,6 +17,9 @@ close_button.addEventListener('click',()=>{
     extra_options.style.height='0px';
     extra_options.style.color='white';
     more_options.textContent='More';
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
 })
 
 //top right, corner login button click
@@ -37,6 +27,8 @@ login_button.addEventListener('click',()=>{
     menu_button.style.transform="rotate(90deg)";
     menu_button.style.marginLeft="30.5%";
     menu_frame.style.marginLeft="0";
+    const entire_doc_height = document.body.scrollHeight
+    window.scrollTo(0,entire_doc_height);
 })
 
 //dropDown feature in the menu bar
