@@ -10,16 +10,28 @@ var height = sidebar_option.clientHeight;
 
 //top left, close menu button
 close_button.addEventListener('click',()=>{
-    menu_button.style.transform="rotate(0deg)";
-    menu_button.style.marginLeft="0.5%";
-    menu_frame.style.marginLeft="-100%";
+    let timer = 0;
 
-    extra_options.style.height='0px';
-    extra_options.style.color='white';
-    more_options.textContent='More';
+    if(extra_options.style.height!=='0px'){
+        extra_options.style.height ='0px'
+        timer = 200
+    }
 
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0
+    setTimeout(()=>{
+        menu_button.style.transform="rotate(0deg)";
+        menu_button.style.marginLeft="0.5%";
+        menu_frame.style.marginLeft="-100%";
+    
+        extra_options.style.height='0px';
+        extra_options.style.color='white';
+        more_options.textContent='More';
+    
+    },timer)
+
+    setTimeout(()=>{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0
+    },400)
 })
 
 //top right, corner login button click
