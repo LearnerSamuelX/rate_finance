@@ -1,5 +1,7 @@
 html{
     scroll-behavior: smooth;
+    text-size-adjust:100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body{
@@ -54,13 +56,12 @@ body{
     box-shadow: 2.5px 2.5px rgba(211, 211, 211, 0.486);
 }
 
-/* 768px */
+/* 1125px */
 @media only screen and (max-width: 1125px){
     #menu_frame{
         width:100%;
         text-align: center;
         margin-left:-100%;
-        font-size: 20px;
     }
 }
 
