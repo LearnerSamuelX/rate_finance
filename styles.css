@@ -65,6 +65,7 @@ body{
 
 .sidebar_option{
     padding:1rem 1rem;
+    font-size: 20px;
 }
 
 .sidebar_option:hover{
