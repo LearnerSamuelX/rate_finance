@@ -21,11 +21,6 @@ var height = sidebar_option.clientHeight;
 //     }
 // })
 
-//orientation change
-window.addEventListener('orientationchange',()=>{
-    height = sidebar_option.clientHeight;
-})
-
 //top left, close menu button
 close_button.addEventListener('click',()=>{
     menu_button.style.transform="rotate(0deg)";
