@@ -121,7 +121,6 @@ body{
 }
 
 #login{
-    margin:0;
     height:10rem;
 }
 
@@ -133,6 +132,7 @@ body{
 
 @media only screen and (max-width: 768px){
     #login h1{
+        padding-left:0;
         text-align: center;
     }
 }
