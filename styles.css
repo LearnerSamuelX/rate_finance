@@ -1,0 +1,119 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav_bar{
+    position: fixed;
+}
+
+#nav_bar{
+    background-color: white;
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+}
+
+#menu_button{
+    float: left;
+    cursor: pointer;
+    transition:1.25s ease;
+    margin-left:0.5%;
+}
+
+#login_button{    
+    font-size: 36px;
+    margin-right:1%;
+    float:right;
+    cursor: pointer;
+    
+}
+
+#login_button a{
+    text-decoration: none;
+    color:black;
+}
+
+.menu_line{
+    width:36px;
+    height:2px;
+    background-color: black;
+    margin:12px 0;
+}
+
+#menu_frame{
+    width:30%;
+    height:100%;
+    background-color:white;
+    transition:1.25s ease; /* Optimize this part */
+    margin-left:-30%;
+    z-index:1;
+    position:fixed;
+    box-shadow: 2.5px 2.5px rgba(211, 211, 211, 0.486);
+}
+
+.sidebar_option{
+    padding:1rem 1rem;
+}
+
+.sidebar_option:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+#extra_options{
+    height:0;
+    transition:height 0.5s;
+    color:white;
+}
+
+.extra_option{
+    transition:color 0.5s;
+}
+
+#more_options{
+    text-align: center;
+    color:grey;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#more_options:hover{
+    color:black;
+    background-color: lightgrey;
+    text-decoration:underline;
+}
+
+#testing_1{
+    margin:0;
+    height:50rem;
+}
+
+#testing_1 h1{
+    margin:0;
+    padding:4rem 3.5rem;
+}
+
+#testing_2{
+    margin:0;
+    height:50rem;
+}
+
+#testing_2 h1{
+    margin:0;
+    padding:2.5rem 3.5rem;
+}
+
+#login{
+    margin:0;
+    height:10rem;
+}
+
+#login h1{
+    margin:0;
+    padding-top:1rem;
+    padding-left:3.5rem;
+}
