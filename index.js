@@ -9,10 +9,12 @@ var more_options = document.getElementById('more_options');
 
 var height = sidebar_option.clientHeight;
 var counter = 0 //unclicked
+var slided = 0 //not showing
 
 
 menu_button.addEventListener('click',()=>{
     if(counter===1){
+        slided = 1
         menu_button.style.transform="rotate(90deg)";
         menu_button.style.marginLeft="30.5%";
         menu_frame.style.marginLeft="0";
@@ -29,14 +31,15 @@ close_button.addEventListener('click',()=>{
 
     if(extra_options.style.height!=='0px'){
         extra_options.style.height ='0px'
-        timer = 200
+        extra_options.style.color='white'
+        timer = 400
     }
 
     setTimeout(()=>{
         menu_button.style.transform="rotate(0deg)";
         menu_button.style.marginLeft="0.5%";
         menu_frame.style.marginLeft="-100%";
-    
+
         extra_options.style.height='0px';
         extra_options.style.color='white';
         more_options.textContent='More';
@@ -46,16 +49,15 @@ close_button.addEventListener('click',()=>{
     setTimeout(()=>{
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0
-    },400)
+    },750)
 })
 
 //top right, corner login button click
 login_button.addEventListener('click',()=>{
-    if(counter===0){
+    if(counter===0 || slided===1){
         counter=1 //logged in
         login_button.textContent='Loggedin'
     }else{
-        
         login_button.textContent='Login'
         counter=0 //logged out
     }
