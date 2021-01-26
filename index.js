@@ -29,6 +29,9 @@ close_button.addEventListener('click',()=>{
     login_button.textContent='Login'
     counter=0
 
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
+
     if(extra_options.style.height!=='0px'){
         extra_options.style.height ='0px'
         extra_options.style.color='white'
@@ -46,10 +49,6 @@ close_button.addEventListener('click',()=>{
     
     },timer)
 
-    setTimeout(()=>{
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0
-    },750)
 })
 
 //top right, corner login button click
